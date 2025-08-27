@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary;
 
 namespace DungeonSlime;
 
-public class Game1 : Game
+public class Game1 : Core
 {
-    private GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
-
-    public Game1()
+    public Game1() : base("Dungeon Slime", 1280, 720, false) // (string title, int width, int height, bool fullScreen)
     {
-        _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
     }
@@ -22,13 +18,14 @@ public class Game1 : Game
     {
         Console.WriteLine("Game is initializing...");
         base.Initialize();
+        // TODO: Add your initialization logic here
         Console.WriteLine("Initializing complete");
     }
 
     protected override void LoadContent()
     {
         Console.WriteLine("Loading content...");
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
+        // TODO: use this.Content to load your game content here
         Console.WriteLine("Loading complete");
     }
 
