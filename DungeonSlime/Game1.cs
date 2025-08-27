@@ -20,7 +20,6 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
-        // TODO: Add your initialization logic here
         Console.WriteLine("Game is initializing...");
         base.Initialize();
         Console.WriteLine("Initializing complete");
@@ -28,9 +27,9 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
+        Console.WriteLine("Loading content...");
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        // TODO: use this.Content to load your game content here
+        Console.WriteLine("Loading complete");
     }
 
     protected override void Update(GameTime gameTime)
@@ -41,6 +40,7 @@ public class Game1 : Game
         // TODO: Add your update logic here
 
         base.Update(gameTime);
+
     }
 
     protected override void Draw(GameTime gameTime)
